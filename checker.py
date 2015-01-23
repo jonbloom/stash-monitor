@@ -2,12 +2,10 @@ import stashy, pprint
 from collections import defaultdict
 from time import time, sleep
 from subprocess import call
-from config import username, password
+from config import *
 
 d = defaultdict(int)
 last_updated = int(time()) * 1000
-
-repos_to_check = ['oac', 'cow', 'registrar', 'htm','csal', 'tools-ticketpos']
 
 stash = stashy.connect("http://www-git.server.gvsu.edu:7990", username, password).projects['WT']
 
